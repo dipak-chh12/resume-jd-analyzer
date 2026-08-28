@@ -25,7 +25,9 @@ def init_database():
             logger.warning(f"Failed to connect to PostgreSQL database: {e}. Falling back to SQLite.")
             
     # Fall back to SQLite
-    sqlite_url = "sqlite:///./resume_matcher.db"
+    import os
+    db_path = "/tmp/resume_matcher.db" if os.environ.get("VERCEL") else "./resume_matcher.db"
+    sqlite_url = f"sqlite:///{db_path}"
     logger.info(f"Initializing SQLite database at {sqlite_url}...")
     # SQLite needs check_same_thread=False for multithreading in FastAPI
     engine = create_engine(sqlite_url, connect_args={"check_same_thread": False})
