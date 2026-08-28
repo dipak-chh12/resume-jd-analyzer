@@ -69,7 +69,7 @@ Copy `.env.example` to `.env` and fill in the values:
 ```env
 # Groq api config
 GROQ_API_KEY=your-groq-api-key
-GROQ_MODEL= choose the model you chhose , i use openai/gpt-oss-120b
+GROQ_MODEL= choose the model you want , i use openai/gpt-oss-120b
 
 # Embedding Model
 EMBEDDING_MODEL= i used BAAI/bge-small-en-v1.5, you can choose other models as well
