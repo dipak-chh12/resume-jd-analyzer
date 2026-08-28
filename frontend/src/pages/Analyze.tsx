@@ -50,17 +50,10 @@ export const Analyze: React.FC<AnalyzeProps> = ({ onAnalysisComplete }) => {
           </div>
         </div>
 
-        {/* Humorous Free Tier Notice */}
-        <div className="p-3.5 rounded-xl bg-brandYellow/10 border border-brandYellow/25 text-xs text-brandYellow flex items-start gap-3">
-          <span className="text-base">🐢</span>
-          <div>
-            <span className="font-semibold block mb-0.5">Free-Tier Model Disclaimer</span>
-            <p className="opacity-90 leading-relaxed">
-              We're running on free tier AI models, so processing might be a little bit slow (~20-40 seconds).
-              Hang tight or grab a quick sip of coffee ☕ — good things take time!
-            </p>
-          </div>
-        </div>
+        {/* Small discreet notice */}
+        <p className="text-[11px] text-textSecondary/70 italic text-center font-mono">
+          * Running on free-tier AI models; processing may take ~20–40 seconds.
+        </p>
 
         <div className="space-y-2.5">
           {progressSteps.map((step, index) => {
