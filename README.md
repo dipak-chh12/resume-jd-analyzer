@@ -67,19 +67,19 @@ To run offline or without secondary infrastructure containers during local devel
 Copy `.env.example` to `.env` and fill in the values:
 
 ```env
-# Groq API Configuration
+# Groq api config
 GROQ_API_KEY=your-groq-api-key
-GROQ_MODEL=llama-3.3-70b-versatile
+GROQ_MODEL= choose the model you chhose , i use openai/gpt-oss-120b
 
 # Embedding Model
-EMBEDDING_MODEL=Qwen/Qwen3-Embedding-0.6B
+EMBEDDING_MODEL= i used BAAI/bge-small-en-v1.5, you can choose other models as well
 
 # Databases (Set up automatically if left empty/unreachable)
 DATABASE_URL=postgresql://postgres:postgres@localhost:5432/resume_matcher
 QDRANT_URL=http://localhost:6333
 QDRANT_API_KEY=
 
-# Mock AI Mode (Set to true to run offline without Groq or SentenceTransformers)
+# Mock AI mode the development, set to TRUE for dev mode and save tokens.
 MOCK_AI=false
 ```
 
