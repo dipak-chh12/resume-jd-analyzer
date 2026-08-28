@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+pydantic
+pydantic-settings
+sqlalchemy
+qdrant-client
+pypdf
+python-docx
+langchain
+langchain-core
+langchain-groq
+sentence-transformers
+torch
+python-multipart

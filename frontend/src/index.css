@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-textPrimary antialiased selection:bg-brandYellow/30 selection:text-white font-sans;
+    background: #151515;
+    min-height: 100vh;
+  }
+}
+
+.glass-panel {
+  background: #202020;
+  border: 1px solid #343434;
+  box-shadow: none;
+}
+
+.glass-input {
+  background-color: #191919;
+  border: 1px solid #404040;
+  color: #f1efed;
+  transition: all 0.15s ease-in-out;
+}
+
+.glass-input:focus {
+  border-color: #f0eeeb;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(240, 238, 235, 0.12);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Pulse animation for analysis progress */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(240, 238, 235, 0.15);
+  }
+  70% {
+    transform: scale(1);
+      box-shadow: 0 0 0 10px rgba(240, 238, 235, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(240, 238, 235, 0);
+  }
+}
+
+.pulse-loader {
+  animation: pulse-ring 2s infinite;
+}
+
